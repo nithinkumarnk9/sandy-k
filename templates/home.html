@@ -2,9 +2,272 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANDEEP</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+    <style>
+        body {
+        background-color:#E6E6FA;
+        h1 {
+        color: Black;
+        font-weight: bold;
+        font-family: Roboto;
+        padding-left: 500px;
+        }
+        h6 {
+        color: grey;
+        font-family: Arial;
+        }
+        h5 {
+        color: white;
+        font-weight: bold;
+        font-family: Noto Sans;
+        }
+        p {
+        color: white;
+        font-family: Helvetica Neue;
+        }
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 1.9s ease-out forwards;
+        }
+ /* SlideInRight animation */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .slide-in-right {
+      animation: slideInRight 1.9s ease-in-out forwards;
+      position: absolute;
+      overflow: hidden;
+    }
+        .slide-in-right:hover .overlay {
+         transform: scale(1.05);
+           opacity: 0.9;
+        }
+        */ Overlay Fade-In Effect */
+        .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+        height 100%;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        align: items: center;
+        justify-content: center;
+        color: black;
+        font-size: 1rem;
+        z-index: 1;
+        transition: .5s ease;
+        background-color: #008CBA;
+        }
+        */ Overlay content Styling */
+        overlay img {
+        width: 50%;
+        margin-bottom: 15px;
+        }
+        .overlay h5 {
+        margin: 0;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+        .card-img {
+            transition: transform 0.5s ease;
+        }
+        .card:hover .card-img {
+            transform: scale(1.1);
+        }
+        .card-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .card:hover .card-img-overlay {
+            opacity: 1;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+        .contact-us {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #A0D6B4;
+        box-shadow: 0 4px 8px rgba(0,0,0,0);
+        border-radius: 8px;
+        }
+        .contact-us h2 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #343A40;
+        }
+        .form-control:focus {
+        box-shadow: none;
+        border-color: #6C757D;
+        }
+        h7 {
+        padding-left: 600px;
+        color: black;
+        }
+</style>
 <body>
-<h1>kumar</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand" href="{{ url_for('home') }}">SANDEEP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}" style="color: #ffffff">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: #ffffff">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: #ffffff">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Header Section -->
+<header class="header">
+    <div class="jumbotron">
+        <h1>WELCOME TO SANDEEP</h1>
+        <h6>Sandeep is a name of a boy. It is very popular in india among Hindu communities. Lucky Number for this name is 1. People with this name generally aggressive, self-confident, genuine and impatient.</h6>
+    </div>
+</header>
+<div class="container mt-5">
+    <div class="card mx-auto slide-in-right" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqt1qsPze94MQldp6hmjS1LwkVZlGgcOTDiZ_v0IvcFP6Xhn7ui9sJHmiw8KyyA3JDkZGhod08w4Ht9QN3TZX6D2E-IGhAsi2qsyFBicRYT8Tzo0s1Gt-SilTnpQBx1Tmis57P60PU-gsMqV5Z_5sQV3YNb0tUDfEdjHo0yRyzL8XsYfKv6iiNKm70Wc0Z/s1280/WhatsApp%20Image%202024-08-31%20at%2010.36.13_a4ddae8f.jpg" class="card-img img-fluid" alt="Card image" style="width:800px; height:400px"><div class="card-img-overlay text-center">
+            <div>
+                <h5 class="card-title">SENSIBLE</h5>
+                <p class="card-text">It describes something or someone that is characterized by practicality, good judgement, and reasonableness. When something is sensible, it aligns with logic and common sense, making it appropriate or beneficial for the situation.</p>
+            </div>
+         </div>
+    </div>
+    <div class="container mt-5">
+        <div class="card mx-auto slide-in-left" style="max-width: 400px;">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFTQVShAMgY1LKLvaotFUTolkj2e_bbzo1EPaoMI4Q72bnbKHE52BAlLScGb1M5QjoBBm3zisiCkctz2Dqe1o-7t7AsFdBdTmWlpIJR7KA0SJ-2R9Bgdj9jvvf2sA4qGJxy1SPOktx3yExUROFKfPM2zK2idHs-MCRrTvUSY1RzC4R89FrhPeuYbkR3doF/s1280/WhatsApp%20Image%202024-08-31%20at%2010.36.22_fc6d950f.jpg" class="card-img img-fluid" alt="card-img"><div class="card-img-overlay text-center">
+        <div>
+        <h5 class="card-title">AMBITIOUS</h5>
+        <p class="card-text">It describes a strong desire and determination to achieve success, often accompanied by a willingness to work hard and take on challenges. An ambitious person sets high goals for themselves, aiming for significant accomplishments in their personal for professional life.</p>
+            </div>
+    </div>
+        </div>
+</div>
+<div class="container mt-5">
+    <div class="card mx-auto slide-in-right" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEij-0ebU34zL_fIBcvS8HeAZxzTczsm5APSITuN5-6b3ndBCvPpjBCdvkXcBLBEb5YpvGMe2VkZHCMhisWkAvCFiqwfwg4uQ_y2dIx0lqnxMJO6x-t6daTr_QYSyS2FeDKJFVJdTlgXhsjWtyD7Oyk16XlcOWb6XlZVbSmuDM98M1sFDTlUvZ_2UGEninLU/s1280/WhatsApp%20Image%202024-08-31%20at%2010.36.20_10af8968.jpg" class="card-img img-fluid" alt="card-img"><div class="card-img-overlay text-centre" style="width: 400px; height: 400px">
+        <div>
+            <h5 class="card-title">NICE</h5>
+            <p class="card-text">It describe something that is pleasant, agreeable, or satisfactory. When someone or something is referred to as nice it usually conveys a sense of kindness, friendliness, or comfort.</p>
+            </div>
+        </div>
+    </div>
+      </div>
+</div>
+<div class="container mt-5">
+    <div class="card mx-auto slide-in-left" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnNP6N30gFP3PQ1H8fykVZneE3SmS3CUWbDcjIg1dxrMrvn-c8XG1we9ezFUv5b-SGCWKJ6gtZ-vn2AIiemc6PLwLvx15IrBYySjjxecG_pMiy9z1uTpqBT8AVhoZHNxPUu2mF6aps83f6LNxUyDc43FrvXCgPq91S0e_h5ihqCkQHZnNUp9TjYmESCbzs/s612/WhatsApp%20Image%202024-08-31%20at%2010.36.24_e88e8953.jpg" class="card-img img fluid" alt="card-img"><div class="card-img-overlay text-centre" style="width: 400px; height: 400px">
+        <div>
+            <h5 class="card-title">DECENT</h5>
+            <p class="card-text">It is generally refers to something that meets an acceptable standard or is reasonably good, without being exceptional. It conveys a sense of adequacy, respectability or modesty. </p>
+    </div>
+</div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="card mx-auto slide-in-right" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIZAXcS_UqyAiA8610sZk3nTQzJUfWuyBDTebniDPnYEqMvy77veqABG2r_WAQ8U5g-e6IpfV00YcS1s3CxzvTM0TYkCASEWLSMdRortYYyBMhxw0HAai0r3WyEFA2qXx0JnaDrz7tCGESQ2dx4Aq8R1JkP_BB6dexo_ljYNuBFsiAqvDAL3eoligtHyo2/s1280/WhatsApp%20Image%202024-08-31%20at%2010.36.19_616dc795.jpg" class="card-img img fluid" alt="card-img"><div class="card-img-overlay text-centre" style="width: 400px; height: 400px">
+        <div>
+            <h5 class="card-title">EXCELLENT</h5>
+            <p class="card-text">It is used to describe something or someone of exceptionally high quality, superior performance or outstanding merit. It signifies that something is very good, often surpassing expectations or standards. </p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="card mx-auto slide-in-right" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTOO2gIFKNzK8WEPxiyC_Qp-_tdTJ6vRCp2BaQR9YbPfdHEH_KndNW7YKAJiRrBDmfE27L15-GfWSTvpQGis4-lqR5RAj0C_zOvspXr1UqpVK3eWwJycHrRrL9kV7qtwgTprQTq3tpR6h8_Lg1tBU-qsFr-cxT1SmjwZ5C8ohla_LXr5E4WymN5mMijF4L/s612/WhatsApp%20Image%202024-08-31%20at%2010.03.51_e61971aa.jpg" class="card-img img fluid" alt="card-img"><div class="card-img-overlay text-centre slide-in-right" style="width: 400px; height: 400px">
+        <div>
+            <h5 class="card-title">ENTHUSIASTIC</h5>
+            <p class="card-text">It is used to describe someone who shows intense and eager enjoyment, interest, or approval towards something. An enthusiastic person is highly motivated, passionate, and full of energy about activity, idea, or event.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="card mx-auto hidden slide-in-right" style="max-width: 400px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZNDRRllqMFNTeft2vUmlk_fCblPKXHcuNs4KK2x24hXCndMZo2seFy1drj-jX8sgEED5B8-EDuPsvNEJfcDpx65eE6YSok67xEdWZBWRy9XRnh8Em_lYTimiK4GCM9fNsrzAG4IwOHokkHonfDyyZsKYmNg5dj9mKp7f7LpQyf_SuV-d0wat4FNAWc2fV/s1280/WhatsApp%20Image%202024-08-31%20at%2010.36.16_763b3044.jpg" class="card-img img fluid" alt="card-img"><div class="card-img-overlay text-centre" style="width: 400px; height: 400px">
+        <div>
+            <h5 class="card-title">PRUDENT</h5>
+            <p class="card-text">It describes someone who is careful and wise in their when considering the potential risks and consequences. A prudent person exercises good judgement, often thinking ahead and acting with caution to avoid unnecessary problems or dangers.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- CONTACT US -->
+<div class="contact-us">
+    <h2>CONTACT US</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">NAME</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">EMAIL ADDRESS</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">MESSAGE</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Write your message" required></textarea>
+        </div>
+    </form>
+</div>
+<!-- FOOTER -->
+<div class="footer">
+    <h7>&copy; 2024 Sandeep. All Rights Reserved.</h7>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
